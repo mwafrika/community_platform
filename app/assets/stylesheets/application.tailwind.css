@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body.dark {
+  @apply bg-gray-800 text-white;
+}
+
+body.light {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.tabs {
+  display: flex;
+  min-width: 400px;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 10 rgb(0, 0, 0.05);
+}
+
+.tabs_head {
+  display: flex;
+  align-items: stretch;
+}
+
+.tabs_toggle {
+  display: flex;
+  width: 33.333334%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+.tabs_toggle.active {
+  background: #fff;
+  border-bottom: 2px solid #000;
+}
+
+.tabs_content {
+  display: none;
+  padding: 30px;
+}
+
+.tabs_content.active {
+  display: block;
+}

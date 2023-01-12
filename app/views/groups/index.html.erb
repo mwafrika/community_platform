@@ -1,0 +1,11 @@
+<%# <%= render Home::TabsComponent.new(tabs: [{ id: 'all', label: 'All Groups', path: groups_path }, 
+{ id: 'my', label: 'My Groups', path: my_groups_path }, 
+{ id: 'member', label: 'Groups I Belong To', path: member_groups_path }], active_tab: 'all') %> 
+
+
+<div class=" flex justify-between mx-24">
+    <%= render(Home::AllGroupsComponent.new) %>
+    <%= render(GroupForm::GroupFormComponent.new(group: Group.new)) %>
+</div>
+
+    

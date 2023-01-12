@@ -1,0 +1,29 @@
+<nav data-controller="navbar--navbar-card-component" class=" flex h-20 text-white items-center justify-between px-9 bg-gray-500">
+  <%= link_to 'My Group', groups_path, class: 'navbar-brand' %>
+  <% if user_signed_in? %>
+  <div  class="navbar-nav w-[300px] flex justify-between">
+      <ul class="navbar-nav w-full flex justify-between">
+        <li><%= current_user.email %></li>
+    <li>
+        <%= link_to 'Groups', groups_path, class: 'nav-link' %>
+    </li>
+    <li class="flex gap-x-4">
+        <%=form_with model: User.new, url: destroy_user_session_path, method: :delete do %> 
+        <button class="text-red-600">Logout</button>
+        <% end %>
+        <span>
+        <i class="fa-solid fa-right-from-bracket"></i>
+        </span>
+    </li>
+      </ul>
+    </div>
+  <% else %>
+    <div class="" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to 'Login', new_user_session_path, class: 'nav-link' %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+</nav>

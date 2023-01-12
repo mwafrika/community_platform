@@ -1,0 +1,13 @@
+<%# This partial will render a single group %>
+
+<% groups.each do |group|  %>
+<div class="group">
+  <h2><%= group.name %></h2>
+  <p><%= group.description %></p>
+  <% if current_user && group.users.include?(current_user) %>
+    <%= link_to "Leave group", leave_group_path(group), method: :patch %>
+  <% else %>
+    <%= link_to "Join group", join_group_path(group), method: :patch %>
+  <% end %>
+</div>
+<% end %>

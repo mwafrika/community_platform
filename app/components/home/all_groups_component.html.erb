@@ -1,0 +1,28 @@
+
+<div class="tabs w-[60%]" data-controller="home--all-groups-component">
+ 
+    <ul class="nav nav-tabs flex w-full border border-slate-600 border-spacing-2">
+      <li class="nav-item tab selected bg-gray-300 border text-gray-700 border-slate-600 border-b-2 p-2 w-full" data-tab="tab1">
+        <%= link_to "All Groupsss", "#", class: "nav-link", data: { action: "click->home--all-groups-component#showAll" } %>
+      </li>
+      <li class="nav-item tab bg-gray-300 text-gray-700 border border-slate-600 border-b-2 p-2 w-full" data-tab="tab2">
+        <%= link_to "My Groups", "#", class: "nav-link", data: { action: "click->home--all-groups-component#showMy" } %>
+      </li>
+      <li class="nav-item tab bg-gray-300 text-gray-700 border border-slate-600 border-b-2 p-2 w-full" data-tab="tab3">
+        <%= link_to "Member Groups", "#", class: "nav-link", data: { action: "click->home--all-groups-component#showMember" } %>
+      </li>
+    </ul>
+
+    <div class="">
+      <div id="tab1" class="tab-content selected p-4" data-target="home--all-groups-component.all">
+      </div>
+      <div id="tab2" class="tab-content p-4" data-target="home--all-groups-component.my"></div>
+      <div id="tab3" class="tab-content p-4" data-target="home--all-groups-component.member"></div>
+    </div>
+</div>
+
+
+
+
+
+

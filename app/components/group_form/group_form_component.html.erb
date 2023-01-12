@@ -1,0 +1,57 @@
+
+<div data-controller="group-form--group-form-component">
+<button class="px-8 py-4 rounded-lg cursor-pointer bg-blue-500 text-white" id="myBtn" data-action="click->group-form--group-form-component#open">Create a new goup</button>
+<div class="hidden fixed z-[1] pt-[100px] top-0 left-0 w-full h-full overflow-auto bg-[rgb(0,0,0)] bg-[rgba(0,0,0,0.4)]" data-target="group-form--group-form-component.modal">
+  <div class="bg-[#fefefe] m-auto w-2/5 p-5 border border-[#888]">
+    <span class=" cursor-pointer text-[#aaaaaa] float-right text-3xl font-bold" data-action="click->group-form--group-form-component#close" data-target="group-form--group-form-component.remove">&times;</span>
+    <!-- Modal Header -->
+    <div class="bg-gray-50 px-4 py-3 border-b border-gray-200 sm:px-6">
+          <h3 class="text-lg leading-6 font-medium text-gray-900">
+            Create a new group
+          </h3>
+          <div class="mt-2 flex items-center">
+            <div class="ml-3 flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-white">
+              <i class="fa-solid fa-circle-plus"></i>
+           </div>
+          <div class="ml-4">
+         <p class="text-sm leading-5 text-gray-500">
+    Please enter the details for the new group.
+    </p>
+    </div>
+    </div>
+    </div>
+     <!-- Modal body -->
+    <div class="px-4 py-3 sm:px-6">
+      <div class="mt-2">
+        <label for="name" class="block text-sm font-medium leading-5 text-gray-700">
+          Name
+        </label>
+        <div class="mt-1 rounded-md shadow-sm">
+          <input id="name" class="form-input py-3 px-4 block w-full leading-5 rounded-md transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+        </div>
+      </div>
+      <div class="mt-4">
+        <label for="description" class="block text-sm font-medium leading-5 text-gray-700">
+          Description
+        </label>
+        <div class="mt-1 rounded-md shadow-sm">
+          <textarea id="description" class="form-input py-3 px-4 block w-full leading-5 rounded-md transition duration-150 ease-in-out sm:text-sm sm:leading-5"></textarea>
+        </div>
+      </div>
+    </div>
+    <%# footer %>
+    <div class="bg-gray-50 px-4 py-3 border-t border-gray-200 sm:px-6">
+      <div class="flex justify-end">
+        <button data-action="click->group-form--group-form-component#close" data-target="group-form--group-form-component.cancel" type="button" class="inline-flex justify-center py-2 px-4 rounded-md text-sm font-medium leading-5 text-gray-700 bg-white border border-gray-300 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out" data-action="click->modal#close">
+          Cancel
+        </button>
+        <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 rounded-md text-sm font-medium leading-5 text-white bg-blue-600 border border-transparent hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-800 transition duration-150 ease-in-out">
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+

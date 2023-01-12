@@ -1,0 +1,7 @@
+<%# <div data-controller="theme--theme-picker-component" id="theme-picker-component" class="m-[20px]  flex justify-end flex-col  items-end">
+  <%= select_tag(:item, options_for_select(@items, @selected_item), select_tag_options) %>
+<%# </div>  %>
+
+<button data-controller="theme--theme-picker-component" data-action="click->theme--theme-picker-component#toggleTheme" class="">
+    Switch Theme
+</button>
