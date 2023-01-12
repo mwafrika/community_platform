@@ -1,33 +1,29 @@
+
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["content", "tab", "member", "all-groups-tab", "created"];
+  static targets = ["tab", "created", "member"];
 
-  connect() {
-    // this.switch();
-  }
+  toggle(event) {
+    event.preventDefault();
 
-  switch() {
-    this.tabTargets.forEach((tab, index) => {
-      tab.addEventListener("click", (event) => {
-        event.preventDefault();
+    // Remove the active class from all <li> elements
+    this.tabTargets.forEach(tab => tab.classList.remove("active"));
 
-        this.tabTargets.forEach((tab) => {
-          let getList = tab.children;
-          console.log("eeeee", getList);
-          tab.classList.remove("active");
-        });
-        this.contentTargets.forEach((content) =>
-          content.classList.remove("active")
-        );
-        console.log(
-          "tabTargets",
-          this.tabTargets[index].classList,
-          this.contentTargets[index].classList
-        );
-        this.tabTargets[index].classList.add("active");
-        this.contentTargets[index].classList.add("active");
-      });
-    });
+    // Add the active class to the clicked <li> element
+    event.currentTarget.closest("li").classList.add("active");
+
+    // Hide all tab content sections
+    this.createdTargets.forEach(created => created.classList.add("hidden"));
+    this.memberTargets.forEach(member => member.classList.add("hidden"));
+
+    // Show the tab content section associated with the clicked <a> element's data-target attribute
+    const target = event.currentTarget.dataset.target;
+    if (target === "tabs--tab-component.created") {
+      this.createdTargets.forEach(created => created.classList.remove("hidden"));
+    } else if (target === "tabs--tab-component.member") {
+      this.memberTargets.forEach(member => member.classList.remove("hidden"));
+    }
   }
 }
+

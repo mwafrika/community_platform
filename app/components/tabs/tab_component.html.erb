@@ -2,11 +2,15 @@
   <div class="tabs">
     <ul class="tabs_head" data-target="tabs--tab-component.tab">
        <li class="tabs_toggle active">
-         <a href="#" class="tab-link" data-tab-id="all-groups-tab" data-action="click->tabs--tab-component#switch" data-target="tabs--tab-component.all-groups-tab">All groups</a>
+         <%# <a href="#" class="tab-link" data-tab-id="all-groups-tab" data-action="click->tabs--tab-component#switch" data-target="tabs--tab-component.all-groups-tab">All groups</a> %>
+         <a href="#" class="tab-link" data-tab-id="all-groups-tab" data-action="click->tabs--tab-component#toggle">All groups</a>
+
        </li>
 
         <li class="tabs_toggle">
-           <a href="#" class="tab-link" data-action="click->tabs--tab-component#switch" data-tab-id="created-groups-tab" data-target="tabs--tab-component.created">Created by me</a>
+           <%# <a href="#" class="tab-link" data-action="click->tabs--tab-component#switch" data-tab-id="created-groups-tab" data-target="tabs--tab-component.created">Created by me</a> %>
+           <a href="http://localhost:3000/created_by_me" class="tab-link" data-action="click->tabs--tab-component#toggle" data-target="tabs--tab-component.created">Created by me</a>
+
         </li>
         <li class="tabs_toggle">
              <a href="#" class="tab-link" data-action="click->tabs--tab-component#switch" data-tab-id="belonging-groups-tab" data-target="tabs--tab-component.member">Belonging to me</a>

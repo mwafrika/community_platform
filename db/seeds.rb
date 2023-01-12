@@ -6,8 +6,8 @@
 # Examples:
 #
 User.create!([
-               { name: 'Star Wars', email: 'user1@gmail.com', password: '123456' },
-               { name: 'mwafrika', email: 'user2@gmail.com', password: '123456' },
+               { name: 'Star Wars', email: 'rails@gmail.com', password: '123456' },
+               { name: 'mwafrika', email: 'ruby@gmil.com', password: '123456' },
                { name: 'john', email: 'user3@gmail.com', password: '123456' },
                { name: 'kasanga', email: 'user4@gmail.com', password: '123456' },
                { name: 'Star', email: 'user5@gmail.com', password: '123456' },
@@ -34,16 +34,16 @@ Post.create!([{
 
 Comment.create!([
                   {
-                    body: 'Nice post', user_id: User.second.id, post_id: Post.second.id, parent_id: Comment.first.id
+                    body: 'Nice post', user_id: User.second.id, post_id: Post.second.id, parent_id: Comment.first
                   },
                   {
-                    body: 'Good post', user_id: User.second.id, post_id: Post.second.id, parent_id: Comment.first.id
+                    body: 'Good post', user_id: User.second.id, post_id: Post.second.id, parent_id: Comment.first
                   },
                   {
-                    body: 'Nice post3', user_id: User.second.id, post_id: Post.second.id, parent_id: Comment.second.id
+                    body: 'Nice post3', user_id: User.second.id, post_id: Post.second.id, parent_id: Comment.second
                   },
                   {
-                    body: 'Nice post4', user_id: User.third.id, post_id: Post.first.id, parent_id: Comment.first.id
+                    body: 'Nice post4', user_id: User.third.id, post_id: Post.first.id, parent_id: Comment.first
                   }
                 ])
 

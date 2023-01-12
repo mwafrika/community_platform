@@ -33,5 +33,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get "created_by_me", to: "group_tabs#created", as: "created_by_me"
+
   resources :comments, only: %i[edit update]
 end

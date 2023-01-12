@@ -7,8 +7,9 @@ class GroupTabsController < ApplicationController
     @show_leave_button = false
     @show_delete_button = false
   end
-
+  
   def created
+    # ing.pry
     @groups = current_user.groups
     @show_delete_button = true
     @show_join_button = false
